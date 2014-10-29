@@ -2,8 +2,19 @@
 
 [VoiceText Web API](https://cloud.voicetext.jp/webapi) Golang wrapper library
 
+## Installation
+```
+go get github.com/zaneli/goyish-voicetext/voicetext
+```
+
 ## Usage
 ```
+import (
+	"github.com/zaneli/goyish-voicetext/voicetext"
+	"log"
+	"os"
+)
+
 client := voicetext.NewClient(<YOUR_API_KEY>)
 content, err := client.Tts("Hello world", voicetext.Show, nil)
 
