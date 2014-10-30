@@ -60,6 +60,10 @@ func (c *client) post(method string, endPoint string, params map[string]string) 
 	return ioutil.ReadAll(res.Body)
 }
 
+func (c *client) String() string {
+	return "voicetext.Client"
+}
+
 func createValues(params map[string]string) url.Values {
 	values := map[string][]string{}
 	for k, v := range params {
